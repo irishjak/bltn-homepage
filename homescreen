@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B.L.T.N</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    html {
+      background: #000000;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #000000;
+      color: #ffffff;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+    }
+
+    .homepage {
+      width: min(900px, 88vw);
+      text-align: center;
+      transform: translateY(-7vh);
+    }
+
+    /* BLTN BRAND */
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 52px;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+
+      color: #ffffff;
+
+      font-family:
+        "Arial Narrow",
+        "Roboto Condensed",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+      font-size: clamp(76px, 12vw, 138px);
+      font-weight: 800;
+
+      line-height: 0.85;
+
+      letter-spacing: 15px;
+      text-indent: 15px;
+
+      text-align: center;
+    }
+
+    /* SHAMROCK */
+
+    .shamrock {
+      width: 100%;
+
+      margin-top: 22px;
+
+      color: #ffffff;
+
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+      line-height: 1;
+
+      text-align: center;
+    }
+
+    /* GOOGLE SEARCH */
+
+    .search-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    .search {
+      display: block;
+
+      width: 100%;
+      height: 66px;
+
+      padding: 0 30px 0 62px;
+
+      background: #0d0d0d;
+      color: #ffffff;
+
+      border: 1px solid #292929;
+      border-radius: 33px;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+
+      outline: none;
+
+      transition:
+        border-color 180ms ease,
+        background 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    .search::placeholder {
+      color: #666666;
+    }
+
+    .search:hover {
+      background: #111111;
+      border-color: #3a3a3a;
+    }
+
+    .search:focus {
+      background: #111111;
+      border-color: #666666;
+
+      box-shadow:
+        0 0 0 1px #333333,
+        0 12px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .search-icon {
+      position: absolute;
+
+      left: 25px;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      color: #777777;
+
+      font-size: 25px;
+      line-height: 1;
+
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* SHORTCUTS */
+
+    .shortcuts {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 28px;
+    }
+
+    .shortcuts a {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      height: 38px;
+
+      padding: 0 17px;
+
+      color: #777777;
+      background: transparent;
+
+      border: 1px solid #1d1d1d;
+      border-radius: 19px;
+
+      text-decoration: none;
+
+      font-size: 12px;
+      font-weight: 500;
+
+      letter-spacing: 0.7px;
+
+      transition:
+        color 180ms ease,
+        border-color 180ms ease,
+        background 180ms ease,
+        transform 180ms ease;
+    }
+
+    .shortcuts a:hover {
+      color: #ffffff;
+
+      background: #0d0d0d;
+
+      border-color: #444444;
+
+      transform: translateY(-1px);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      .homepage {
+        width: 88vw;
+      }
+
+      h1 {
+        font-size: 70px;
+        letter-spacing: 9px;
+        text-indent: 9px;
+      }
+
+      .brand {
+        margin-bottom: 40px;
+      }
+
+      .search {
+        height: 58px;
+        border-radius: 29px;
+      }
+
+      .shortcuts {
+        gap: 8px;
+      }
+
+      .shortcuts a {
+        height: 36px;
+        padding: 0 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="homepage">
+
+    <div class="brand">
+      <h1>B.L.T.N</h1>
+      <div class="shamrock">☘</div>
+    </div>
+
+    <form action="https://www.google.com/search" method="GET">
+
+      <div class="search-wrap">
+
+        <span class="search-icon">⌕</span>
+
+        <input
+          class="search"
+          type="text"
+          name="q"
+          placeholder="Search the web"
+          autocomplete="off"
+          autofocus
+        >
+
+      </div>
+
+    </form>
+
+    <nav class="shortcuts">
+
+      <a href="https://www.youtube.com" target="_blank">
+        YouTube
+      </a>
+
+      <a href="https://www.instagram.com" target="_blank">
+        Instagram
+      </a>
+
+      <a href="https://open.spotify.com" target="_blank">
+        Spotify
+      </a>
+
+      <a href="https://mail.google.com" target="_blank">
+        Gmail
+      </a>
+
+      <a href="https://bltn-3ryjaftsh-bltn2.vercel.app" target="_blank">
+        BLTN OS
+      </a>
+
+      <a href="https://github.com" target="_blank">
+        GitHub
+      </a>
+
+    </nav>
+
+  </div>
+
+</body>
+</html>
